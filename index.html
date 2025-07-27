@@ -15,6 +15,10 @@
             --text-color: #212529;
             --text-muted-color: #6c757d;
             --border-color: #dee2e6;
+            --offer-new-user-bg: #e9f7eb;
+            --offer-new-user-text: #218838;
+            --offer-limited-bg: #fdf0f1;
+            --offer-limited-text: #dc3545;
         }
 
         body {
@@ -107,13 +111,21 @@
             font-size: 1.5rem;
             margin-top: 0;
         }
-        .pricing-card .price {
+        .pricing-card .price-wrapper {
+            margin: 15px 0;
+        }
+        .pricing-card .original-price {
+            text-decoration: line-through;
+            color: var(--text-muted-color);
+            font-size: 1.1rem;
+            margin-right: 10px;
+        }
+        .pricing-card .final-price {
             font-size: 2.5rem;
             font-weight: 700;
             color: var(--primary-color);
-            margin: 10px 0;
         }
-        .pricing-card .price span {
+        .pricing-card .price-term {
             font-size: 1rem;
             font-weight: 400;
             color: var(--text-muted-color);
@@ -131,9 +143,15 @@
             font-size: 0.8rem;
             font-weight: 600;
             border-radius: 12px;
-            background-color: #e9f7eb;
-            color: var(--primary-color-dark);
+        }
+        .badge.best-value {
+            background-color: var(--offer-new-user-bg);
+            color: var(--offer-new-user-text);
             margin-bottom: 15px;
+        }
+        .badge.limited-time {
+            background-color: var(--offer-limited-bg);
+            color: var(--offer-limited-text);
         }
 
         .faq-section details {
@@ -248,23 +266,42 @@
                 <div class="pricing-card">
                     <h3>Monthly Subscription</h3>
                     <p class="description">Access all Pro features of a single plugin. Billed monthly.</p>
-                    <div class="price">$2.99 <span>/ month</span></div>
+                    <div class="price-wrapper">
+                        <span class="original-price">$9.99</span>
+                        <span class="final-price">$2.99</span>
+                        <span class="price-term">/ month</span>
+                    </div>
+                    <span class="badge best-value">Special offer for new users</span>
                 </div>
                 <div class="pricing-card">
                     <h3>Quarterly Subscription</h3>
                     <p class="description">Same access, save more. Billed every 3 months.</p>
-                    <div class="price">$8.88 <span>/ quarter</span></div>
+                    <div class="price-wrapper">
+                        <span class="original-price">$29.97</span>
+                        <span class="final-price">$8.88</span>
+                        <span class="price-term">/ quarter</span>
+                    </div>
+                     <span class="badge best-value">New Member Offer</span>
                 </div>
                 <div class="pricing-card highlight">
-                    <div class="badge">Best Value</div>
+                    <div class="badge best-value">Best Value</div>
                     <h3>Annual Subscription</h3>
                     <p class="description">Best value. Access all current & future plugins. Billed yearly.</p>
-                    <div class="price">$35.88 <span>/ year</span></div>
+                    <div class="price-wrapper">
+                        <span class="original-price">$119.88</span>
+                        <span class="final-price">$35.88</span>
+                         <span class="price-term">/ year</span>
+                    </div>
+                    <span class="badge limited-time">Limited time discount</span>
                 </div>
                 <div class="pricing-card">
                     <h3>Lifetime Deal (LTD)</h3>
                     <p class="description">A one-time purchase for lifetime access to a single plugin's Pro features.</p>
-                    <div class="price">from $19.99</div>
+                     <div class="price-wrapper">
+                        <span class="original-price">$49.99</span>
+                        <span class="final-price">from $19.99</span>
+                    </div>
+                    <span class="badge limited-time">Limited time discount</span>
                 </div>
             </div>
         </section>
@@ -305,12 +342,12 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-links">
-                <a href="terms.html">Terms of Service</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="refund.html">Refund Policy</a>
+                <a href="terms.html" target="_blank">Terms of Service</a>
+                <a href="privacy.html" target="_blank">Privacy Policy</a>
+                <a href="refund.html" target="_blank">Refund Policy</a>
             </div>
             <p class="copyright">© 2025 PlugPro. All Rights Reserved.</p>
-        </div>       
+        </div>
     </footer>
 
 </body>
