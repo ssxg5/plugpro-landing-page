@@ -83,18 +83,25 @@
             margin-bottom: 15px;
         }
 
+        /* --- Grid Layout Update --- */
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            align-items: stretch;
+            gap: 25px;
+            grid-template-columns: 1fr; /* Default to 1 column for mobile */
         }
-
+        
+        /* 2 columns for tablets and desktops */
+        @media (min-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
         .pricing-card {
             background-color: var(--card-background);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 30px;
+            padding: 25px;
             display: flex;
             flex-direction: column;
             text-align: center;
@@ -103,14 +110,24 @@
         
         .pricing-card.highlight {
             border-color: var(--primary-color);
-            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
-            transform: scale(1.05);
+            box-shadow: 0 4px S15px rgba(40, 167, 69, 0.2);
+            position: relative;
+            transform: scale(1.02);
         }
 
+        .pricing-card-header {
+            min-height: 45px; /* Alignment Fix: Reserve space for the badge */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        
         .pricing-card h3 {
             font-size: 1.5rem;
             margin-top: 0;
+            margin-bottom: 5px;
         }
+
         .pricing-card .price-wrapper {
             margin: 15px 0;
         }
@@ -147,9 +164,9 @@
         .badge.best-value {
             background-color: var(--offer-new-user-bg);
             color: var(--offer-new-user-text);
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
-        .badge.limited-time {
+        .badge.offer-badge {
             background-color: var(--offer-limited-bg);
             color: var(--offer-limited-text);
         }
@@ -263,46 +280,59 @@
         <section id="pricing" class="section pricing-section">
             <h2 class="section-title">Choose Your Plan</h2>
             <div class="pricing-grid">
+                
                 <div class="pricing-card">
-                    <h3>Monthly Subscription</h3>
+                    <div class="pricing-card-header">
+                        <h3>Monthly Subscription</h3>
+                    </div>
                     <p class="description">Access all Pro features of a single plugin. Billed monthly.</p>
                     <div class="price-wrapper">
                         <span class="original-price">$9.99</span>
                         <span class="final-price">$2.99</span>
                         <span class="price-term">/ month</span>
                     </div>
-                    <span class="badge best-value">Special offer for new users</span>
+                    <span class="badge offer-badge">Special offer for new users</span>
                 </div>
+
                 <div class="pricing-card">
-                    <h3>Quarterly Subscription</h3>
+                    <div class="pricing-card-header">
+                         <h3>Quarterly Subscription</h3>
+                    </div>
                     <p class="description">Same access, save more. Billed every 3 months.</p>
                     <div class="price-wrapper">
                         <span class="original-price">$29.97</span>
                         <span class="final-price">$8.88</span>
                         <span class="price-term">/ quarter</span>
                     </div>
-                     <span class="badge best-value">New Member Offer</span>
+                     <span class="badge offer-badge">New Member Offer</span>
                 </div>
+
                 <div class="pricing-card highlight">
-                    <div class="badge best-value">Best Value</div>
-                    <h3>Annual Subscription</h3>
+                     <div class="pricing-card-header">
+                        <span class="badge best-value">Best Value</span>
+                        <h3>Annual Subscription</h3>
+                    </div>
                     <p class="description">Best value. Access all current & future plugins. Billed yearly.</p>
                     <div class="price-wrapper">
                         <span class="original-price">$119.88</span>
                         <span class="final-price">$35.88</span>
                          <span class="price-term">/ year</span>
                     </div>
-                    <span class="badge limited-time">Limited time discount</span>
+                    <span class="badge offer-badge">Limited time discount</span>
                 </div>
+
                 <div class="pricing-card">
-                    <h3>Lifetime Deal (LTD)</h3>
+                    <div class="pricing-card-header">
+                        <h3>Lifetime Deal (LTD)</h3>
+                    </div>
                     <p class="description">A one-time purchase for lifetime access to a single plugin's Pro features.</p>
                      <div class="price-wrapper">
                         <span class="original-price">$49.99</span>
                         <span class="final-price">from $19.99</span>
                     </div>
-                    <span class="badge limited-time">Limited time discount</span>
+                    <span class="badge offer-badge">Limited time discount</span>
                 </div>
+
             </div>
         </section>
 
