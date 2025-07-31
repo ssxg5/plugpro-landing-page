@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercari智能定价助手</title>
+    <title>Smart Pricing Assistant for Mercari - PlugPro</title>
     <style>
         * {
             margin: 0;
@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro', 'Yu Gothic Medium', '游ゴシック Medium', YuGothic, 'Meiryo UI', 'メイリオ', Meiryo, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
@@ -34,17 +34,7 @@
             text-align: center;
             position: relative;
         }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="white" opacity="0.1"/><circle cx="80" cy="40" r="3" fill="white" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="white" opacity="0.1"/></svg>');
-        }
-
+        
         .header h1 {
             font-size: 28px;
             margin-bottom: 10px;
@@ -222,7 +212,7 @@
             color: white;
             padding: 40px;
             text-align: center;
-            margin: 30px -40px 0 -40px; /* Adjusted margin */
+            margin: 30px -40px 0 -40px;
         }
 
         .pricing-header {
@@ -330,7 +320,7 @@
         .install-section {
             background: #f8f9fa;
             padding: 30px;
-            margin: 30px -40px 0 -40px; /* Adjusted margin */
+            margin: 30px -40px 0 -40px;
             text-align: center;
         }
 
@@ -401,12 +391,10 @@
             font-weight: bold;
         }
 
-        /* --- 页脚样式 --- */
         .footer {
             text-align: center;
             padding: 40px 20px;
-            background: #ffffff;
-            border-top: 1px solid #e9ecef;
+            background: white;
         }
         .footer p {
             margin-bottom: 10px;
@@ -430,22 +418,17 @@
             .pricing-plans {
                 grid-template-columns: 1fr;
             }
-            
             .feature-grid {
                 grid-template-columns: 1fr;
             }
-            
             .main-content {
                 padding: 20px;
             }
-            
-            .pricing-section {
-                margin: 20px -20px 0 -20px;
-                padding: 30px 20px;
-            }
-
-            .install-section {
-                 margin: 20px -20px 0 -20px;
+            .pricing-section, .install-section {
+                margin-left: -20px;
+                margin-right: -20px;
+                padding-left: 20px;
+                padding-right: 20px;
             }
         }
     </style>
@@ -453,45 +436,45 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>📊 Mercari智能定価アシスタント</h1>
-            <p>AIを活用した最適な価格設定で、売上を最大化しましょう</p>
+            <h1>📊 Smart Pricing Assistant for Mercari</h1>
+            <p>Maximize your sales with optimal pricing powered by AI.</p>
         </div>
 
         <div class="main-content">
             <div class="demo-section">
-                <h2 class="demo-title">🎯 実際の動作デモ</h2>
+                <h2 class="demo-title">🎯 Live Action Demo</h2>
                 
                 <div class="product-card">
                     <div class="product-header">
                         <div class="product-image">👜</div>
                         <div class="product-info">
-                            <h3>ブランドバッグ - ほぼ未使用</h3>
-                            <p>出品カテゴリ: レディースバッグ</p>
+                            <h3>Designer Handbag - Like New</h3>
+                            <p>Category: Women's Bags</p>
                         </div>
                     </div>
                     
                     <div class="pricing-analysis">
                         <div class="price-range">
                             <div>
-                                <div class="price-label">類似商品価格帯</div>
+                                <div class="price-label">Similar Items Price Range</div>
                                 <div class="price-value">¥2,800 - ¥4,200</div>
                             </div>
                             <div>
-                                <div class="price-label">平均成約価格</div>
+                                <div class="price-label">Average Sold Price</div>
                                 <div class="price-value">¥3,400</div>
                             </div>
                         </div>
                         
                         <div class="recommended-price">
-                            <div class="label">🎯 推奨出品価格</div>
+                            <div class="label">🎯 Recommended List Price</div>
                             <div class="price">¥3,800</div>
                         </div>
                         
                         <div class="analysis-tags">
-                            <span class="tag">需要高</span>
-                            <span class="tag">競合少</span>
-                            <span class="tag">売れやすい価格帯</span>
-                            <span class="tag">7日以内売却予想</span>
+                            <span class="tag">High Demand</span>
+                            <span class="tag">Low Competition</span>
+                            <span class="tag">Popular Price Point</span>
+                            <span class="tag">Est. 7-Day Sale</span>
                         </div>
                     </div>
                 </div>
@@ -500,26 +483,26 @@
             <div class="feature-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🧠</div>
-                    <h3>AI価格分析</h3>
-                    <p>同カテゴリの過去30日間の成約データを分析し、最適価格を瞬時に提案します。</p>
+                    <h3>AI Price Analysis</h3>
+                    <p>Instantly suggests the optimal price by analyzing sold data from the last 30 days in the same category.</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">📈</div>
-                    <h3>売上予測</h3>
-                    <p>設定価格での売却確率と予想売却日数を表示。戦略的な価格設定が可能です。</p>
+                    <h3>Sales Forecasting</h3>
+                    <p>Displays the sale probability and estimated days to sell at your set price, enabling strategic decisions.</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
-                    <h3>リアルタイム更新</h3>
-                    <p>市場動向の変化に合わせて、価格推奨を自動更新。常に最新の情報でサポートします。</p>
+                    <h3>Real-time Updates</h3>
+                    <p>Automatically updates price recommendations based on market trends, keeping you ahead.</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">🎯</div>
-                    <h3>ワンクリック最適化</h3>
-                    <p>面倒な市場調査は不要。ボタン一つで最適価格を自動設定できます。</p>
+                    <h3>One-Click Optimization</h3>
+                    <p>No more tedious market research. Set the optimal price automatically with a single click.</p>
                 </div>
             </div>
 
@@ -527,34 +510,34 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>機能</th>
-                            <th>手動調査</th>
-                            <th>他社ツール<br>（¥9,800/月）</th>
-                            <th>当プラグイン<br>（¥1,980買い切り）</th>
+                            <th>Feature</th>
+                            <th>Manual Research</th>
+                            <th>Other Tools<br>(¥9,800/month)</th>
+                            <th>Our Plugin<br>(¥1,980 one-time)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>価格調査時間</td>
-                            <td>30分/商品</td>
-                            <td>5分/商品</td>
-                            <td>5秒/商品</td>
+                            <td>Research Time</td>
+                            <td>30 min/item</td>
+                            <td>5 min/item</td>
+                            <td>5 sec/item</td>
                         </tr>
                         <tr>
-                            <td>市場データ精度</td>
+                            <td>Market Data Accuracy</td>
                             <td><span class="cross-mark">×</span></td>
                             <td><span class="check-mark">✓</span></td>
                             <td><span class="check-mark">✓</span></td>
                         </tr>
                         <tr>
-                            <td>リアルタイム更新</td>
+                            <td>Real-time Updates</td>
                             <td><span class="cross-mark">×</span></td>
                             <td><span class="check-mark">✓</span></td>
                             <td><span class="check-mark">✓</span></td>
                         </tr>
                         <tr>
-                            <td>年間コスト</td>
-                            <td>時間コスト大</td>
+                            <td>Annual Cost</td>
+                            <td>High Time Cost</td>
                             <td>¥117,600</td>
                             <td>¥1,980</td>
                         </tr>
@@ -563,115 +546,115 @@
             </div>
 
             <div class="install-section">
-                <h2>📥 簡単3ステップでスタート</h2>
+                <h2>📥 Get Started in 3 Easy Steps</h2>
                 
                 <div class="install-steps">
                     <div class="step">
                         <div class="step-number">1</div>
-                        <h3>拡張機能をインストール</h3>
-                        <p>Chromeウェブストアから無料でダウンロード</p>
+                        <h3>Install Extension</h3>
+                        <p>Download for free from the Chrome Web Store.</p>
                     </div>
                     
                     <div class="step">
                         <div class="step-number">2</div>
-                        <h3>Mercariで商品を開く</h3>
-                        <p>出品したい商品ページを表示</p>
+                        <h3>Open Mercari</h3>
+                        <p>Navigate to the product page you want to list.</p>
                     </div>
                     
                     <div class="step">
                         <div class="step-number">3</div>
-                        <h3>価格分析開始</h3>
-                        <p>プラグインのアイコンをクリックして分析スタート</p>
+                        <h3>Start Analysis</h3>
+                        <p>Click the plugin icon to begin the price analysis.</p>
                     </div>
                 </div>
                 
                 <a href="#" class="cta-button" style="background: linear-gradient(135deg, #00b894, #00a085);">
-                    🚀 無料で始める
+                    🚀 Get Started for Free
                 </a>
             </div>
 
             <div class="pricing-section">
                 <div class="pricing-header">
-                    <h2>シンプルな価格設定</h2>
-                    <p>複雑な月額制ではなく、買い切り型で安心してご利用いただけます</p>
+                    <h2>Simple Pricing</h2>
+                    <p>No complex monthly fees. A single one-time purchase for peace of mind.</p>
                 </div>
                 
                 <div class="pricing-plans">
                     <div class="plan-card">
-                        <div class="plan-title">🆓 無料版</div>
+                        <div class="plan-title">🆓 Free Version</div>
                         <div class="plan-price">¥0</div>
                         <ul class="plan-features">
-                            <li>1日3回まで価格分析</li>
-                            <li>基本的な価格帯表示</li>
-                            <li>広告表示あり</li>
+                            <li>Up to 3 price analyses per day</li>
+                            <li>Basic price range display</li>
+                            <li>Contains advertisements</li>
                         </ul>
-                        <a href="#" class="cta-button" style="background: #74b9ff;">今すぐ試す</a>
+                        <a href="#" class="cta-button" style="background: #74b9ff;">Try Now</a>
                     </div>
                     
                     <div class="plan-card featured">
-                        <div class="plan-title">⭐ Pro版（推奨）</div>
-                        <div class="plan-price">¥1,980 <span class="currency">買い切り</span></div>
+                        <div class="plan-title">⭐ Pro Version (Recommended)</div>
+                        <div class="plan-price">¥1,980 <span class="currency">One-time Purchase</span></div>
                         <ul class="plan-features">
-                            <li>無制限価格分析</li>
-                            <li>AI売上予測機能</li>
-                            <li>価格変動アラート</li>
-                            <li>詳細な競合分析</li>
-                            <li>広告なし</li>
-                            <li>優先サポート</li>
+                            <li>Unlimited price analyses</li>
+                            <li>AI sales forecasting</li>
+                            <li>Price drop alerts</li>
+                            <li>Detailed competitor analysis</li>
+                            <li>Ad-free experience</li>
+                            <li>Priority support</li>
                         </ul>
-                        <a href="#" class="cta-button">Pro版を購入</a>
+                        <a href="#" class="cta-button">Purchase Pro Version</a>
                     </div>
                 </div>
                 
                 <p style="margin-top: 20px;">
-                    💡 <strong>なぜ買い切り？</strong><br>
-                    「毎月の支払いを気にせず、長期的に安心してご利用いただきたい」という想いから、買い切り型を採用しました。
+                    💡 <strong>Why a one-time purchase?</strong><br>
+                    We chose a one-time fee so you can use our tool long-term with confidence, without worrying about monthly payments.
                 </p>
             </div>
         </div>
 
         <footer class="footer">
-            <p><strong>事業者名:</strong> PlugPro</p>
-            <p><strong>連絡先:</strong> <a href="mailto:xinghong98@gmail.com">xinghong98@gmail.com</a></p>
+            <p><strong>Provider:</strong> PlugPro</p>
+            <p><strong>Contact:</strong> <a href="mailto:xinghong98@gmail.com">xinghong98@gmail.com</a></p>
             <div class="footer-links">
-                <a href="terms.html" target="_blank">利用規約</a>
-                <a href="privacy.html" target="_blank">プライバシーポリシー</a>
-                <a href="refund.html" target="_blank">返金ポリシー</a>
+                <a href="terms.html" target="_blank">Terms of Service</a>
+                <a href="privacy.html" target="_blank">Privacy Policy</a>
+                <a href="refund.html" target="_blank">Refund Policy</a>
             </div>
             <p class="copyright">© 2025 PlugPro. All Rights Reserved.</p>
         </footer>
     </div>
 
     <script>
-        // デモ用のインタラクション
+        // Demo interactions
         document.addEventListener('DOMContentLoaded', function() {
-            // CTA ボタンのクリックイベント
+            // CTA button click events
             document.querySelectorAll('.cta-button').forEach(button => {
                 button.addEventListener('click', function(e) {
                     e.preventDefault();
                     
-                    if (this.textContent.includes('Pro版')) {
-                        // Pro版購入の処理（実際はPaddleの決済ページへ）
-                        alert('Paddle決済システムとの連携準備中です。\n現在は審査用のデモ版です。');
+                    if (this.textContent.includes('Pro Version')) {
+                        // Pro version purchase process (in reality, goes to Paddle checkout)
+                        alert('Preparing to integrate with the Paddle payment system.\nThis is a demo version for review purposes.');
                     } else {
-                        // 無料版の処理
-                        alert('Chrome拡張機能ストアでの公開準備中です。\n現在は審査用のデモ版です。');
+                        // Free version process
+                        alert('Preparing for release on the Chrome Web Store.\nThis is a demo version for review purposes.');
                     }
                 });
             });
 
-            // 価格カードのホバーエフェクト
+            // Hover effects for pricing cards
             document.querySelectorAll('.plan-card').forEach(card => {
                 card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                    this.style.transform = 'translateY(-5px)';
                 });
                 
                 card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.transform = 'translateY(0)';
                 });
             });
 
-            // 動的な価格更新デモ
+            // Dynamic price update demo
             setTimeout(() => {
                 const priceElement = document.querySelector('.recommended-price .price');
                 if (priceElement) {
@@ -679,34 +662,33 @@
                     priceElement.style.color = '#ffeaa7';
                     setTimeout(() => {
                         priceElement.style.color = 'white';
-                    }, 1000);
+                    }, 500);
                 }
             }, 3000);
 
-            // スクロール時のアニメーション
+            // Scroll animations
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
             };
 
-            const observer = new IntersectionObserver((entries) => {
+            const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.style.opacity = '1';
                         entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
 
-            // アニメーション対象要素の設定
-            document.querySelectorAll('.feature-card, .plan-card').forEach(el => {
+            document.querySelectorAll('.feature-card, .plan-card, .comparison-table, .step').forEach(el => {
                 el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
+                el.style.transform = 'translateY(20px)';
                 el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 observer.observe(el);
             });
         });
     </script>
-
 </body>
 </html>
