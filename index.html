@@ -401,6 +401,31 @@
             font-weight: bold;
         }
 
+        /* --- 页脚样式 --- */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #ffffff;
+            border-top: 1px solid #e9ecef;
+        }
+        .footer p {
+            margin-bottom: 10px;
+            color: #636e72;
+        }
+        .footer-links a {
+            margin: 0 10px;
+            color: #636e72;
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer .copyright {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #b2bec3;
+        }
+
         @media (max-width: 768px) {
             .pricing-plans {
                 grid-template-columns: 1fr;
@@ -605,17 +630,15 @@
             </div>
         </div>
 
-        <footer style="text-align: center; padding: 40px 20px; background: white; border-top: 1px solid #e9ecef; position: relative; z-index: 2;">
-            <div class="footer-content">
-                <p style="margin-bottom: 10px;"><strong>事業者名:</strong> [您的姓名或工作室名称]</p>
-                <p style="margin-bottom: 20px;"><strong>連絡先:</strong> <a href="mailto:[您的电子邮箱]">[您的电子邮箱]</a></p>
-                <div class="footer-links" style="margin-bottom: 20px;">
-                    <a href="terms.html" style="margin: 0 10px; color: #6c757d; text-decoration: none;">利用規約</a>
-                    <a href="privacy.html" style="margin: 0 10px; color: #6c757d; text-decoration: none;">プライバシーポリシー</a>
-                    <a href="refund.html" style="margin: 0 10px; color: #6c757d; text-decoration: none;">返金ポリシー</a>
-                </div>
-                <p style="font-size: 12px; color: #6c757d;">© 2025 [您的姓名或工作室名称]. All Rights Reserved.</p>
+        <footer class="footer">
+            <p><strong>事業者名:</strong> PlugPro</p>
+            <p><strong>連絡先:</strong> <a href="mailto:xinghong98@gmail.com">xinghong98@gmail.com</a></p>
+            <div class="footer-links">
+                <a href="terms.html" target="_blank">利用規約</a>
+                <a href="privacy.html" target="_blank">プライバシーポリシー</a>
+                <a href="refund.html" target="_blank">返金ポリシー</a>
             </div>
+            <p class="copyright">© 2025 PlugPro. All Rights Reserved.</p>
         </footer>
     </div>
 
@@ -684,18 +707,6 @@
             });
         });
     </script>
-
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-links">
-                <a href="terms.html" target="_blank">Terms of Service</a>
-                <a href="privacy.html" target="_blank">Privacy Policy</a>
-                <a href="refund.html" target="_blank">Refund Policy</a>
-            </div>
-            <p class="copyright">© 2025 PlugPro. All Rights Reserved.</p>
-        </div>
-    </footer>
 
 </body>
 </html>
